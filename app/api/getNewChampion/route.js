@@ -4,7 +4,8 @@ const generateRandomChampion = () => {
   return data[num];
 };
 
-export async function GET() {
+export async function GET(request) {
+  console.log(request.url);
   const champion = generateRandomChampion();
   console.log(champion);
   return Response.json(champion);
