@@ -701,7 +701,7 @@
   },
   {
     "name": "Lissandra",
-    "gender": "FILLER",
+    "gender": "Female",
     "position": ["Middle"],
     "species": ["Human", "Iceborn"],
     "resource": "Mana",
@@ -801,12 +801,12 @@
   },
   {
     "name": "Mordekaiser",
-    "gender": "FILLER",
-    "position": "Top",
-    "species": "FILLER",
+    "gender": "Male",
+    "position": ["Top"],
+    "species": ["Undead"],
     "resource": "Shield",
     "range_type": "Melee",
-    "regions": "Bilgewater",
+    "regions": ["Bilgewater"],
     "release_date": "2010-02-24"
   },
   {
@@ -971,12 +971,12 @@
   },
   {
     "name": "Qiyana",
-    "gender": "FILLER",
-    "position": "Jungle",
-    "species": "FILLER",
+    "gender": "Female",
+    "position": ["Jungle"],
+    "species": ["Human"],
     "resource": "Mana",
     "range_type": "Melee",
-    "regions": "Bilgewater",
+    "regions": ["Bilgewater"],
     "release_date": "2019-06-28"
   },
   {
@@ -1441,7 +1441,7 @@
   },
   {
     "name": "Vi",
-    "gender": "FILLER",
+    "gender": "Female",
     "position": "Jungle",
     "species": ["Human"],
     "resource": "Mana",

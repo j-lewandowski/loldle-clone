@@ -7,3 +7,16 @@ html,
 body {
   height: 100%;
 }
+
+.drop {
+  animation: fall 0.5s forwards;
+}
+
+@keyframes fall {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

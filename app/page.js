@@ -6,10 +6,11 @@ import GuessField from "@/components/GuessField";
 import CorrectChampion from "@/components/CorrectChampion";
 import { useContext, useEffect, useState } from "react";
 import { appContext } from "@/context/AppContext";
-import { useRouter } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 
 export default function Main() {
-  const { setCorrectChampion, setChampions, reset } = useContext(appContext);
+  const { setCorrectChampion, setChampions, reset, guessed } =
+    useContext(appContext);
 
   const fetchData = async () => {
     const resChampion = await fetch("/api/getNewChampion", {
@@ -39,7 +40,10 @@ export default function Main() {
         src="/Logo.webp"
         height={300}
         width={400}
-        className="hover:scale-110 hover:cursor-pointer"
+        className={twMerge(
+          "hover:scale-110 hover:cursor-pointer",
+          guessed && "animate-bounce"
+        )}
         onClick={restartGame}
       />
       <CorrectChampion />
