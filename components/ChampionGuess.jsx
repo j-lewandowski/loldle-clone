@@ -3,7 +3,7 @@ import { useContext } from "react";
 import { twMerge } from "tailwind-merge";
 
 const ChampionGuess = ({ champion }) => {
-  const { correctChampion } = useContext(appContext);
+  const { correctChampion, setGuessed } = useContext(appContext);
 
   function compare(obj1, obj2) {
     const keys = Object.keys(obj1);
@@ -35,19 +35,27 @@ const ChampionGuess = ({ champion }) => {
 
   const fields = compare(champion, correctChampion);
 
+  if (fields.every((element) => element === "correct")) {
+    setGuessed(true);
+  }
+
   const attrList = () => {
     const list = [];
     Object.keys(champion).forEach((attr, i) => {
+      const delay = 100 * i;
       list.push(
         <div
+          key={i}
           className={twMerge(
             "aspect-square h-20 text-center items-center justify-center flex flex-col text-white rounded-lg border-2 border-blue-300",
             fields[i] === "correct"
               ? "bg-green-500"
               : fields[i] === "half-correct"
               ? "bg-yellow-600"
-              : "bg-rose-600"
+              : "bg-rose-600",
+            `drop`
           )}
+          style={{ animationDelay: delay }}
         >
           {Array.isArray(champion[attr])
             ? champion[attr].map((val) => (
