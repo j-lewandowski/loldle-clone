@@ -6,5 +6,6 @@ const generateRandomChampion = () => {
 
 export async function GET() {
   const champion = generateRandomChampion();
+  console.log(champion);
   return Response.json(champion);
 }
