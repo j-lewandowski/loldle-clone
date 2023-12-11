@@ -14,10 +14,10 @@ export default function Main() {
 
   const fetchData = async () => {
     const resChampion = await fetch("/api/getNewChampion", {
-      cache: "no-store",
+      cache: "no-cache",
     });
     const resChampions = await fetch("/api/getChampions", {
-      cache: "no-store",
+      cache: "no-cache",
     });
 
     setCorrectChampion(await resChampion.json());
