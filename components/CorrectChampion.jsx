@@ -9,7 +9,7 @@ const CorrectChampion = () => {
       {!guessed ? (
         <>
           <p className="text-lg text-center mb-3 font-semibold">
-            Guess today's League of Legends champion!
+            Guess today&apos;s League of Legends champion!
           </p>
           <p className="text-center text-gray-300">
             Type any champion to begin.
